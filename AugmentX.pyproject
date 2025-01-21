@@ -1,0 +1,9 @@
+{
+    "files": [
+        "mainwindow.py",
+        "form.ui",
+        "AugmentX.pyproject.user",
+        "requirements.txt",
+        "ui_form.py"
+    ]
+}

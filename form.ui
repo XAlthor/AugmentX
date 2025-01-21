@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AugmentX - Image Augmentation</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="folders_group">
+      <property name="title">
+       <string>Select Folders</string>
+      </property>
+      <layout class="QVBoxLayout" name="folders_layout">
+       <item>
+        <layout class="QHBoxLayout" name="input_layout">
+         <item>
+          <widget class="QLabel" name="input_folder_label">
+           <property name="text">
+            <string>Input folder: not selected</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="input_folder_button">
+           <property name="text">
+            <string>Select Input Folder</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="output_layout">
+         <item>
+          <widget class="QLabel" name="output_folder_label">
+           <property name="text">
+            <string>Output folder: not selected</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="output_folder_button">
+           <property name="text">
+            <string>Select Output Folder</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="augmentation_group">
+      <property name="title">
+       <string>Augmentation Settings</string>
+      </property>
+      <layout class="QVBoxLayout" name="augmentation_layout">
+       <item>
+        <widget class="QCheckBox" name="flip_horizontal">
+         <property name="text">
+          <string>Horizontal Flip</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="flip_vertical">
+         <property name="text">
+          <string>Vertical Flip</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="rotate">
+         <property name="text">
+          <string>Rotation</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="brightness_check">
+         <property name="text">
+          <string>Brightness Change</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="contrast_check">
+         <property name="text">
+          <string>Contrast Change</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="augmentation_info">
+         <property name="text">
+          <string>Select augmentation parameters</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="apply_button">
+      <property name="text">
+       <string>Apply Augmentation</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progress_bar">
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
