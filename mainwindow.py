@@ -266,34 +266,13 @@ class MainWindow(QMainWindow):
 
 
     def launch_labelimg(self):
-        """Launch labelImg application in virtual environment"""
+        """Launch labelImg application"""
         try:
-            # Get the virtual environment's Python interpreter path
-            venv_python = os.path.join(os.path.dirname(sys.executable), 'python')
-            
-            # Import labelImg to get its location
-            import labelImg
-            labelimg_dir = os.path.dirname(labelImg.__file__)
-            labelimg_main = os.path.join(labelimg_dir, 'labelImg.py')
-            
-            if not os.path.exists(labelimg_main):
-                labelimg_main = os.path.join(labelimg_dir, 'labelImg', 'labelImg.py')
-                if not os.path.exists(labelimg_main):
-                    raise FileNotFoundError("Could not find labelImg.py")
-            
-            if hasattr(self, 'output_folder') and self.output_folder:
-                command = f'"{venv_python}" "{labelimg_main}" "{self.output_folder}"'
-            else:
-                command = f'"{venv_python}" "{labelimg_main}"'
-
-            # Use subprocess to run in background
             import subprocess
-            subprocess.Popen(command, shell=True)
+            subprocess.Popen(["labelImg"])
             self.ui.statusbar.showMessage("LabelImg launched successfully")
-
         except Exception as e:
             self.ui.statusbar.showMessage(f"Error launching labelImg: {str(e)}")
-
 
 
 if __name__ == "__main__":

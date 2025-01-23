@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 14.0.1, 2025-01-23T07:03:47. -->
+<!-- Written by QtCreator 14.0.1, 2025-01-24T00:16:10. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -132,6 +132,8 @@
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Python.PysideBuildStep</value>
+      <value type="QString" key="Python.PySideProjectTool">/Users/dzonisua/Documents/QtProjects/AugmentX/.qtcreator/Python_3_9_6_realvenv/bin/pyside6-project</value>
+      <value type="QString" key="Python.PySideUic">/Users/dzonisua/Documents/QtProjects/AugmentX/.qtcreator/Python_3_9_6_realvenv/bin/pyside6-uic</value>
      </valuemap>
      <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>
@@ -148,7 +150,10 @@
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
-    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
+     <value type="QString">PATH=/Users/dzonisua/Documents/QtProjects/AugmentX/.qtcreator/Python_3_9_6_realvenv/bin:$PATH:/usr:/usr/bin:/usr/sbin:/sbin</value>
+     <value type="QString">:/usr/bin:/bin:/usr/sbin:/sbin</value>
+    </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Python 3.9.6 real Virtual Environment</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Python.PySideBuildConfiguration</value>
     <value type="QString" key="python">/Users/dzonisua/Documents/QtProjects/AugmentX/.qtcreator/Python_3_9_6_realvenv/bin/python</value>
@@ -200,7 +205,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_form.py</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration./Users/dzonisua/Documents/QtProjects/AugmentX/ui_form.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/dzonisua/Documents/QtProjects/AugmentX/ui_form.py</value>
-    <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
+    <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Script">/Users/dzonisua/Documents/QtProjects/AugmentX/ui_form.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
