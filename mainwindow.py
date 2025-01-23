@@ -264,7 +264,6 @@ class MainWindow(QMainWindow):
             
         self.ui.augmentation_info.setText(info_text)
 
-
     def launch_labelimg(self):
         """Launch labelImg application"""
         try:
