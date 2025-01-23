@@ -102,6 +102,10 @@ class Ui_MainWindow(object):
 
         self.augmentation_layout.addWidget(self.augmentation_info)
 
+        # Add Launch LabelImg button
+        self.launch_labelimg_button = QPushButton(self.augmentation_group)
+        self.launch_labelimg_button.setObjectName(u"launch_labelimg_button")
+        self.augmentation_layout.addWidget(self.launch_labelimg_button)
 
         self.verticalLayout.addWidget(self.augmentation_group)
 
@@ -142,8 +146,8 @@ class Ui_MainWindow(object):
         self.flip_vertical.setText(QCoreApplication.translate("MainWindow", u"Vertical Flip", None))
         self.rotate.setText(QCoreApplication.translate("MainWindow", u"Rotation", None))
         self.brightness_check.setText(QCoreApplication.translate("MainWindow", u"Brightness Change", None))
-        self.contrast_check.setText(QCoreApplication.translate("MainWindow", u"Contrast Change", None))
-        self.augmentation_info.setText(QCoreApplication.translate("MainWindow", u"Select augmentation parameters", None))
+        self.contrast_check.setText(QCoreApplication.translate("MainWindow", u"Contrast", None))
+        self.augmentation_info.setText("")
+        self.launch_labelimg_button.setText(QCoreApplication.translate("MainWindow", u"Launch LabelImg", None))
         self.apply_button.setText(QCoreApplication.translate("MainWindow", u"Apply Augmentation", None))
     # retranslateUi
-
