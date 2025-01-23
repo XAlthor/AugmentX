@@ -63,6 +63,10 @@ class Ui_MainWindow(object):
 
         self.folders_layout.addLayout(self.output_layout)
 
+        # Add Launch LabelImg button to folders group
+        self.launch_labelimg_button = QPushButton(self.folders_group)
+        self.launch_labelimg_button.setObjectName(u"launch_labelimg_button")
+        self.folders_layout.addWidget(self.launch_labelimg_button)
 
         self.verticalLayout.addWidget(self.folders_group)
 
@@ -102,11 +106,6 @@ class Ui_MainWindow(object):
 
         self.augmentation_layout.addWidget(self.augmentation_info)
 
-        # Add Launch LabelImg button
-        self.launch_labelimg_button = QPushButton(self.augmentation_group)
-        self.launch_labelimg_button.setObjectName(u"launch_labelimg_button")
-        self.augmentation_layout.addWidget(self.launch_labelimg_button)
-
         self.verticalLayout.addWidget(self.augmentation_group)
 
         self.apply_button = QPushButton(self.centralwidget)
@@ -135,12 +134,13 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"AugmentX - Image Augmentation", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"AugmentX", None))
         self.folders_group.setTitle(QCoreApplication.translate("MainWindow", u"Select Folders", None))
         self.input_folder_label.setText(QCoreApplication.translate("MainWindow", u"Input folder: not selected", None))
         self.input_folder_button.setText(QCoreApplication.translate("MainWindow", u"Select Input Folder", None))
         self.output_folder_label.setText(QCoreApplication.translate("MainWindow", u"Output folder: not selected", None))
         self.output_folder_button.setText(QCoreApplication.translate("MainWindow", u"Select Output Folder", None))
+        self.launch_labelimg_button.setText(QCoreApplication.translate("MainWindow", u"Launch LabelImg", None))
         self.augmentation_group.setTitle(QCoreApplication.translate("MainWindow", u"Augmentation Settings", None))
         self.flip_horizontal.setText(QCoreApplication.translate("MainWindow", u"Horizontal Flip", None))
         self.flip_vertical.setText(QCoreApplication.translate("MainWindow", u"Vertical Flip", None))
@@ -148,6 +148,5 @@ class Ui_MainWindow(object):
         self.brightness_check.setText(QCoreApplication.translate("MainWindow", u"Brightness Change", None))
         self.contrast_check.setText(QCoreApplication.translate("MainWindow", u"Contrast", None))
         self.augmentation_info.setText("")
-        self.launch_labelimg_button.setText(QCoreApplication.translate("MainWindow", u"Launch LabelImg", None))
         self.apply_button.setText(QCoreApplication.translate("MainWindow", u"Apply Augmentation", None))
     # retranslateUi

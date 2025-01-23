@@ -4,6 +4,7 @@
         "form.ui",
         "AugmentX.pyproject.user",
         "requirements.txt",
-        "ui_form.py"
+        "ui_form.py",
+        "README.md"
     ]
 }

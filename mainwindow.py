@@ -3,11 +3,11 @@ import sys
 import os
 import cv2
 import shutil
-import numpy as np
+#import labelimg
 from pathlib import Path
 import albumentations as A
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog
-from PySide6.QtCore import Qt, QThread, Signal
+from PySide6.QtCore import QThread, Signal
 
 from ui_form import Ui_MainWindow
 
@@ -264,17 +264,37 @@ class MainWindow(QMainWindow):
             
         self.ui.augmentation_info.setText(info_text)
 
+
     def launch_labelimg(self):
-        """Launch labelImg application"""
+        """Launch labelImg application in virtual environment"""
         try:
+            # Get the virtual environment's Python interpreter path
+            venv_python = os.path.join(os.path.dirname(sys.executable), 'python')
+            
+            # Import labelImg to get its location
+            import labelImg
+            labelimg_dir = os.path.dirname(labelImg.__file__)
+            labelimg_main = os.path.join(labelimg_dir, 'labelImg.py')
+            
+            if not os.path.exists(labelimg_main):
+                labelimg_main = os.path.join(labelimg_dir, 'labelImg', 'labelImg.py')
+                if not os.path.exists(labelimg_main):
+                    raise FileNotFoundError("Could not find labelImg.py")
+            
             if hasattr(self, 'output_folder') and self.output_folder:
-                # Launch labelImg with the output folder
-                os.system(f'labelImg "{self.output_folder}"')
+                command = f'"{venv_python}" "{labelimg_main}" "{self.output_folder}"'
             else:
-                # Launch labelImg without specific folder
-                os.system('labelImg')
+                command = f'"{venv_python}" "{labelimg_main}"'
+
+            # Use subprocess to run in background
+            import subprocess
+            subprocess.Popen(command, shell=True)
+            self.ui.statusbar.showMessage("LabelImg launched successfully")
+
         except Exception as e:
             self.ui.statusbar.showMessage(f"Error launching labelImg: {str(e)}")
+
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
