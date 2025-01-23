@@ -2,7 +2,6 @@
 import sys
 import cv2
 import shutil
-#import labelimg
 from pathlib import Path
 import albumentations as A
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog
