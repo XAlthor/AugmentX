@@ -3,6 +3,7 @@ Simple program for augmentation annotated images.
 Tool for dataset augmentation that automatically preserves YOLO annotations. Create augmented versions of your annotated images while maintaining correct bounding box coordinates.
 
 ## Features
+- Automatic Annotation Update: The annotations of the original images are automatically adjusted along with the augmented images, eliminating the need for manual re-annotation.
 - Image augmentation with various transformations:
   - Horizontal and vertical flips
   - Rotations (90°, 180°, 270°)
