@@ -1,5 +1,5 @@
 # AugmentX
-Simple programm for augmentation annotated images.
+Simple program for augmentation annotated images.
 Tool for dataset augmentation that automatically preserves YOLO annotations. Create augmented versions of your annotated images while maintaining correct bounding box coordinates.
 
 ## Installation
